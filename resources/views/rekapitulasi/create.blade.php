@@ -1,4 +1,11 @@
 @extends('layouts.dashboard')
+@hasSection('title')
+    @section('title', 'Tambah Transaksi')
+@else
+    @section('title', 'Tambah Transaksi')
+    @section('content')
+    
+@endif
 
 @section('content')
 <div class="container">

@@ -1,4 +1,5 @@
 @extends('layouts.dashboard')
+
 @section('content')
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -40,8 +41,6 @@
                             <td>{{ $transaksi->kategori }}</td>
                             <td>{{ $transaksi->dana_masuk ? 'Rp ' . number_format($transaksi->dana_masuk, 0, ',', '.') : '-' }}</td>
                             <td>{{ $transaksi->dana_keluar ? 'Rp ' . number_format($transaksi->dana_keluar, 0, ',', '.') : '-' }}</td>
-                            {{-- <td>{{ $transaksi->dana_masuk }}</td>
-                            <td>{{ $transaksi->dana_keluar }}</td> --}}
                             <td>
                                 <div class="d-flex gap-2">
                                     <a href="{{ route('rekapitulasi-transaksi.edit', $transaksi->id) }}" class="btn btn-warning btn-sm">Edit</a>
@@ -61,3 +60,4 @@
     </div>
 </div>
 @endsection
+

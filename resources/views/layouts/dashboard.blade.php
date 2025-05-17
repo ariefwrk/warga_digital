@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Warga Digital</title>
+    <title>@yield('title', 'Dashboard') - Warga Digital</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,13 +63,13 @@
             border-radius: 8px;
             margin-bottom: 20px;
         }
-        .header .search-bar {
+        /* .header .search-bar {
             width: 300px;
             padding: 10px;
             border-radius: 5px;
             border: none;
             font-family: 'Inter', sans-serif;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
         }
         .grid-container {
             display: flex;
@@ -149,13 +149,12 @@
         </form>
     </div>
     
-
     {{-- Content --}}
     <div class="content">
         {{-- Header --}}
         <div class="header">
             <div class="user-info">
-                <span class="username" style="font-weight: 500;">Hello, {{ Auth::user()->name }}</span>
+                <span class="username" style="font-weight: 500;">Halo, {{ Auth::user()->name }}</span>
             </div>
         </div>
 

@@ -33,7 +33,8 @@
                                     <form action="{{ route('kegiatanwarga.destroy', $item->id) }}" method="POST" style="display: inline;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                                        {{-- <button type="submit" class="btn btn-danger btn-sm">Hapus</button> --}}
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus transaksi ini?')">Hapus</button>
                                     </form>
                                 </div>
                             </td>
